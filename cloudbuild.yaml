@@ -1,0 +1,4 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['functions', 'deploy', 'subscribeSlack', '--trigger-topic', 'cloud-builds', '--runtime', 'nodejs10', '--set-env-vars', '"SLACK_WEBHOOK_URL=${_SLACK_WEBHOOK_URL}"', '--region', 'asia-northeast1']
+
